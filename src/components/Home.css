@@ -1,0 +1,54 @@
+/* Home.css */
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffd700; 
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .yearbook-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .classmate-item {
+    text-align: center;
+    margin: 20px;
+    max-width: 200px;
+    background-color: #fff; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .classmate-item:hover {
+    transform: scale(1.05); 
+  }
+  
+  .classmate-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .classmate-name {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333; 
+  }
+  
+  .classmate-role,
+  .classmate-quote {
+    margin-bottom: 10px;
+    color: #666; }
+  
