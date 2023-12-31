@@ -1,15 +1,30 @@
-// Welcome.jsx
+
 
 import React from "react";
 import comsats from "../assets/images/comsats.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ArrowRightCircle } from "lucide-react";
-import FlairEffect from "./FlairEffect"; 
+import FlairEffect from "./FlairEffect";
 import "./Welcome.css";
+
+const containerVariants = {
+  hidden: { opacity: 0, y: "-100vh" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 120 },
+  },
+};
 
 function Welcome() {
   return (
-    <div className="welcomecontan">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="welcomecontan"
+    >
       <div className="comsatscontainer">
         <img className="comsatsImg" src={comsats} alt="Comsats Logo" />
       </div>
@@ -21,11 +36,13 @@ function Welcome() {
       </div>
       <div className="proceed">
         <Link to="/home">
-          <ArrowRightCircle size={60} />
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <ArrowRightCircle className="arrowIcon" size={60} />
+          </motion.div>
         </Link>
       </div>
       <FlairEffect />
-    </div>
+    </motion.div>
   );
 }
 

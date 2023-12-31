@@ -1,54 +1,112 @@
 /* Home.css */
 
-.page {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #ffd700; 
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+/* Add a global font-family for a consistent look */
+body {
+  font-family: 'Arial', sans-serif;
   
-  .yearbook-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
-  }
+    background: linear-gradient(to bottom, #ffd700, #f8f8f8);
+    height: 100vh
   
-  .classmate-item {
-    text-align: center;
-    margin: 20px;
-    max-width: 200px;
-    background-color: #fff; 
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .classmate-item:hover {
-    transform: scale(1.05); 
-  }
-  
-  .classmate-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .classmate-name {
-    margin: 10px 0;
-    font-weight: bold;
-    color: #333; 
-  }
-  
-  .classmate-role,
-  .classmate-quote {
-    margin-bottom: 10px;
-    color: #666; }
-  
+}
+
+/* Style the navigation buttons */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.navigation button {
+  background-color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navigation button:hover:enabled {
+  background-color: #ff7b00;
+}
+
+/* Style the classmate items */
+.classmate-item {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #000000; /* Add a solid border */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  margin: 20px;
+  text-align: center;
+}
+
+.classmate-item:hover {
+  transform: scale(1.1);
+}
+
+/* Style the classmate details */
+.classmate-details {
+  background-color: #f8f8f8;
+
+  border-radius: 0 0 10px 10px;
+}
+
+/* Add a subtle hover effect for classmate details */
+.classmate-item:hover .classmate-details {
+  background-color: #fff;
+}
+
+/* Style the classmate name and role */
+.classmate-name,
+.classmate-role {
+  margin: 0;
+}
+
+/* Add some spacing and styling to the quotes */
+.classmate-quote {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Add a subtle gradient background to the page */
+
+
+/* Add a border-radius to the navigation buttons */
+.navigation button {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Center the page content */
+.yearbook-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+.classmate-image {
+  width: 100%;
+  max-height: 400px; /* Adjust the maximum height as needed */
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+@font-face {
+  font-family: 'custom-font';
+  src: url(../assets/fonts/Yasmen.ttf);
+}
+.sp20title{
+  text-align: center;
+  font-family: 'custom-font', Courier, monospace;
+  font-size: 40px;
+  color: #05555f;
+  filter: drop-shadow(10px 10px 20px red)
+
+}
