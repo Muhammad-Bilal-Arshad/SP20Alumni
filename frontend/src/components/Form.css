@@ -1,0 +1,47 @@
+/* AddUserForm.css */
+
+.add-user-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-user-form h2 {
+    color: #4CAF50;
+    text-align: center;
+  }
+  
+  .add-user-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .add-user-form input,
+  .add-user-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-user-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .add-user-form button:hover {
+    background-color: #45a049;
+  }
+  
